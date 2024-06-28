@@ -27,19 +27,19 @@ export default class HolbertonCourse {
     return this._length;
   }
 
-  set student(student) {
-    if (!(student instanceof Array)) {
+  set students(students) {
+    if (!(students instanceof Array)) {
       throw TypeError('Student must be an array');
     }
-    student.forEach((std) => {
+    students.forEach((std) => {
       if (typeof std !== 'string') {
         throw TypeError('student must contain strings only');
       }
     });
-    this._student = student;
+    this._students = students;
   }
 
   get student() {
-    return this._student;
+    return this._students;
   }
 }
