@@ -8,4 +8,5 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
     .then((results) => {
       results.map((result) => arr.push(result));
     });
+	return arr;
 }
